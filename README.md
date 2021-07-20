@@ -36,7 +36,7 @@ nvm install v12.22.3
 nvm use v12.22.3
 ```
 
-Edit config.json in root of this repository and ergo.json in pool_configs directory
+Edit config.json in root of this repository and ergo.json in pool_configs directory. Detailed config values description here https://github.com/mhssamadani/ErgoStratumServer/blob/master/start.js
 
 Set up dependencies
 ```
