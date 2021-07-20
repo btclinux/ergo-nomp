@@ -1,16 +1,15 @@
 {
-    "enabled": false,
-    "coin": "litecoin.json",
-
-    "address": "n4jSe18kZMCdGcZqaYprShXW6EH1wivUK1",
+    "enabled": true,
+    "coin": "ergo.json",
+    "extraNonce1Size": 1,
+    "address": "YOUR_NODE_WALLET_ADDRESS",
 
     "rewardRecipients": {
-        "n37vuNFkXfk15uFnGoVyHZ6PYQxppD3QqK": 1.5,
-        "22851477d63a085dbc2398c8430af1c09e7343f6": 0.1
+        "n37vuNFkXfk15uFnGoVyHZ6PYQxppD3QqK": 0.0 // Do not remove it
     },
 
     "paymentProcessing": {
-        "enabled": true,
+        "enabled": false,
         "paymentInterval": 20,
         "minimumPayment": 70,
         "daemon": {
@@ -22,35 +21,30 @@
     },
 
     "ports": {
-        "3008": {
-            "diff": 8
-        },
-        "3032": {
-            "diff": 32,
+        "8008": {
+            "diff": 1280000,
+            "multiplyDifficulty": true,
             "varDiff": {
                 "minDiff": 8,
-                "maxDiff": 512,
-                "targetTime": 15,
-                "retargetTime": 90,
+                "maxDiff": 640000,
+                "targetTime": 20,
+                "retargetTime": 60,
                 "variancePercent": 30
             }
-        },
-        "3256": {
-            "diff": 256
         }
     },
 
     "daemons": [
         {
             "host": "127.0.0.1",
-            "port": 19332,
-            "user": "testuser",
-            "password": "testpass"
+            "port": 9053,
+            "user": "testuser", // Any value, not using by node
+            "password": "testpass" // Any value, not using by node
         }
     ],
 
     "p2p": {
-        "enabled": true,
+        "enabled": false,
         "host": "127.0.0.1",
         "port": 19333,
         "disableTransactions": true
